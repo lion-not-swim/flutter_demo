@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
 
-class Delete extends StatefulWidget {
+class Search extends StatefulWidget {
+  final arguments;
+
+  Search(this.arguments);
+
   @override
-  _Delete createState() => _Delete();
+  _Search createState() => _Search(arguments['id']);
 }
 
-class _Delete extends State<Delete> {
+class _Search extends State<Search> {
+  String id;
+
+  _Search(this.id);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "第二个页面",
+      title: "第二个页面 search",
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("search"),
+        ),
         floatingActionButton: FloatingActionButton(
           child: Text("返回"),
           onPressed: () {
@@ -19,12 +30,7 @@ class _Delete extends State<Delete> {
         ),
         body: Column(
           children: <Widget>[
-            RaisedButton(
-              child: Text("back"),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
+            Text("${id}"),
           ],
         ),
       ),

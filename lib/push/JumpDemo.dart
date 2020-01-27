@@ -6,11 +6,6 @@ import 'Delete.dart';
 /*
 * 页面进行跳转
 * */
-void main() {
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  runApp(new MyApp());
-}
 
 class MyApp extends StatelessWidget {
   @override
